@@ -62,7 +62,7 @@ int checkWin(Node* head) {
 }
 
 // Function to check if the board is full
-int checkFullBoard(Node* head) {
+int checkBoardFull(Node* head) {
     while (head != NULL) {
         if (head->data == ' ') return 0;
         head = head->next;
@@ -156,7 +156,7 @@ void TicTacToe(int gameMode) {
                     }
                 }
                 gameOver = 1;
-            } else if (checkFullBoard(head)) {
+            } else if (checkBoardFull(head)) {
                 displayBoard(head);
                 printf("The game is a draw.\n");
                 gameOver = 1;
